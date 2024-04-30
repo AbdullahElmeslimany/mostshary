@@ -92,19 +92,14 @@ class ChatPage extends StatelessWidget {
                         width: MediaQuery.sizeOf(context).width - 70,
                         controller: messges,
                         text: "Massage"),
-                    InkWell(
-                      onDoubleTap: () {
-                        cubit.delete();
+                    IconButton(
+                      onPressed: () async {
+                        cubitSend.massages(messges: messges.text);
+                        messges.clear();
                       },
-                      child: IconButton(
-                        onPressed: () async {
-                          cubitSend.massages(messges: messges.text);
-                          messges.clear();
-                        },
-                        icon: const Icon(
-                          Icons.send,
-                          color: Colors.blue,
-                        ),
+                      icon: const Icon(
+                        Icons.send,
+                        color: Colors.blue,
                       ),
                     ),
                   ],

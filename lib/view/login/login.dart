@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:mostshary/controller/logic/login_regester_cubit/login_and_regester_cubit.dart';
-import 'package:mostshary/view/home/home.dart';
 import 'package:mostshary/view/regester/regester.dart';
 import '../../model/textfromfieldcustom.dart';
 
