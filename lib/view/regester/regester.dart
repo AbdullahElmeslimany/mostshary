@@ -1,11 +1,11 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:mostshary/view/login/login.dart';
-
+import '../../controller/logic/login_regester_cubit/login_and_regester_cubit.dart';
 import '../../model/textfromfieldcustom.dart';
-import '../home/home.dart';
 
 class RegesterPage extends StatelessWidget {
   const RegesterPage({super.key});
@@ -16,6 +16,7 @@ class RegesterPage extends StatelessWidget {
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
     final regesterkey = GlobalKey<FormState>();
+    final reqestercubit = BlocProvider.of<LoginAndRegesterCubit>(context);
 
     return Directionality(
       textDirection: TextDirection.ltr,
@@ -102,7 +103,9 @@ class RegesterPage extends StatelessWidget {
                             ),
                             onPressed: () async {
                               if (regesterkey.currentState!.validate()) {
-                                Get.offAll(const MyHomePage());
+                                reqestercubit.regester(
+                                    email: emailController.text,
+                                    password: passwordController.text);
                               }
                             },
                           ),

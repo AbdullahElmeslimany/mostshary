@@ -47,6 +47,7 @@ dependencies:
   dio: ^5.4.3+1
   fluttertoast: ^8.2.2
   lottie: ^3.1.0
+  firebase_auth: ^4.19.4
 
 dev_dependencies:
   flutter_test:

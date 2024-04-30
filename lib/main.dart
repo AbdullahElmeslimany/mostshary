@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:mostshary/view/login/login.dart';
 import 'controller/logic/change_lang/check_en_ar_cubit.dart';
+import 'controller/logic/login_regester_cubit/login_and_regester_cubit.dart';
 import 'controller/logic/message_cubit/massages_cubit.dart';
 import 'controller/logic/send_question_cubit/send_question_cubit.dart';
 import 'controller/locale/locale.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => MassagesCubit()),
+        BlocProvider(create: (context) => LoginAndRegesterCubit()),
         BlocProvider(create: (context) => SendQuestionCubit()),
         BlocProvider(create: (context) => CheckEnArCubit()),
       ],
