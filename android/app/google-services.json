@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "950407601194",
+    "project_id": "mostshary-4e6aa",
+    "storage_bucket": "mostshary-4e6aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950407601194:android:ca995fb5075248fbb4b753",
+        "android_client_info": {
+          "package_name": "com.Muslim.mostshary"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGhVhf-fklqGhJtiJ3wdJpUAdYHFE3fsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950407601194:android:cb6bb7adb8cd68d9b4b753",
+        "android_client_info": {
+          "package_name": "com.example.clean_arch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGhVhf-fklqGhJtiJ3wdJpUAdYHFE3fsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950407601194:android:866b7da710bf1992b4b753",
+        "android_client_info": {
+          "package_name": "com.example.mostshary"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGhVhf-fklqGhJtiJ3wdJpUAdYHFE3fsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
