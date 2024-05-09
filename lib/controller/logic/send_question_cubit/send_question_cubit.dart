@@ -5,8 +5,12 @@ import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get/get.dart';
 import 'package:meta/meta.dart';
+
+import '../../handle_calender/handle_calender.dart';
 
 part 'send_question_state.dart';
 
@@ -37,11 +41,44 @@ class SendQuestionCubit extends Cubit<SendQuestionState> {
 
         if (response.statusCode == 200) {
           loading = false;
+          print(response.data["response"].toString());
           await pref.add({
             "massage": response.data["response"],
             "type": 1,
             "time": DateTime.now().toString()
           });
+          if (response.data["response"].toString() ==
+              "نشكرك على تقديم المعلومات المطلوبة. تم تأكيد حجزك. \nسيتم إرسال معلومات الدفع إلى بريدك الإلكتروني.") {
+            Get.defaultDialog(
+              title: "Add To Calender",
+              content: const Text(""),
+              actions: [
+                Container(
+                  height: 55,
+                  width: 150,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.blue[900]),
+                  child: MaterialButton(
+                    onPressed: () {
+                      Calender.addCalender(
+                        messges: "messges",
+                        startDate: response.data["start_date"],
+                        endDate: response.data["end_date"],
+                      );
+                    },
+                    child: const Text(
+                      "Open",
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                )
+              ],
+            );
+          }
           // .then((value) => getDataMessage());
           log("add A-----------------------");
           emit(SuccessMassagesState());

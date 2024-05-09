@@ -48,6 +48,8 @@ dependencies:
   fluttertoast: ^8.2.2
   lottie: ^3.1.0
   firebase_auth: ^4.19.4
+  android_intent_plus: ^5.0.2
+  add_2_calendar: ^3.0.1
 
 dev_dependencies:
   flutter_test:

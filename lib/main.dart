@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:mostshary/view/home/home.dart';
 import 'package:mostshary/view/login/login.dart';
 import 'controller/logic/change_lang/check_en_ar_cubit.dart';
 import 'controller/logic/login_regester_cubit/login_and_regester_cubit.dart';
@@ -9,6 +10,7 @@ import 'controller/logic/message_cubit/massages_cubit.dart';
 import 'controller/logic/send_question_cubit/send_question_cubit.dart';
 import 'controller/locale/locale.dart';
 import 'controller/locale/locale_controller.dart';
+import 'view/page_test/page_test.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
         ),
         locale: Get.deviceLocale,
         translations: MyLocale(),
-        home: const LoginPage(),
+        home: const MyHomePage(),
       ),
     );
   }
