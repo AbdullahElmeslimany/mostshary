@@ -41,7 +41,6 @@ class SendQuestionCubit extends Cubit<SendQuestionState> {
 
         if (response.statusCode == 200) {
           loading = false;
-          print(response.data["response"].toString());
           await pref.add({
             "massage": response.data["response"],
             "type": 1,
